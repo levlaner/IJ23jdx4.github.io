@@ -2,13 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ddoc.icu</id>
     <title>DDOC</title>
-    <updated>2021-01-31T13:58:52.536Z</updated>
+    <updated>2021-02-25T03:44:28.689Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ddoc.icu"/>
     <link rel="self" href="https://blog.ddoc.icu/atom.xml"/>
     <logo>https://blog.ddoc.icu/images/avatar.png</logo>
     <icon>https://blog.ddoc.icu/favicon.ico</icon>
     <rights>All rights reserved 2021, DDOC</rights>
+    <entry>
+        <title type="html"><![CDATA[提取绿色版JDK8]]></title>
+        <id>https://blog.ddoc.icu/post/ti-qu-lu-se-ban-jdk8/</id>
+        <link href="https://blog.ddoc.icu/post/ti-qu-lu-se-ban-jdk8/">
+        </link>
+        <updated>2021-02-25T03:42:28.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">下载</a><code>Windows x64</code>版本</p>
+</li>
+<li>
+<p>下载完成后，使用7-zip打开安装包</p>
+</li>
+<li>
+<p>进入到<code>.rsrc/1033</code>文件夹，有两个文件是需要的：</p>
+<ul>
+<li>JAVA_CAB9/src.zip，jdk中java类的源码，<strong>不解压</strong>放在JAVA_HOME目录下</li>
+<li>JAVA_CAB10/tools.zip，tools.zip文件解压后就是一个JAVA_HOME</li>
+</ul>
+</li>
+<li>
+<p>使用CMD进入tools.zip解压出来的目录，运行</p>
+<pre><code class="language-powershell">for /r %x in (*.pack) do .\bin\unpack200 -r &quot;%x&quot; &quot;%~dx%~px%~nx.jar&quot;
+</code></pre>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://blog.ddoc.icu/post/hello-gridea/</id>
